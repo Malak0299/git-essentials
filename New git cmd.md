@@ -92,3 +92,5 @@ git stash pop                 # Bring back stashed changes
 - Create branches for new features, keep `main` clean
 
 
+## Practice Notes
+   - Created my first branch: test-branch ✓
