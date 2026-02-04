@@ -94,3 +94,22 @@ git stash pop                 # Bring back stashed changes
 
 ## Practice Notes
    - Created my first branch: test-branch ✓
+
+## Pull Requests (PRs)
+
+Pull Requests are how teams review code before merging into main.
+
+### PR Workflow:
+1. Create branch: `git checkout -b feature-name`
+2. Make changes and commit
+3. Push branch: `git push -u origin feature-name`
+4. Go to GitHub and click "Compare & pull request"
+5. Add description, request reviewers
+6. Team reviews and approves
+7. Merge on GitHub
+8. Delete branch after merging
+
+### Why use PRs?
+- Code review catches bugs
+- Team discusses changes
+- Keeps main branch clean and stable
