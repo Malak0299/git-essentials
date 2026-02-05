@@ -157,3 +157,53 @@ git stash drop         # Delete a stash
 - Need to switch branches but not ready to commit
 - Want to pull latest changes but have uncommitted work
 - Quickly test something on a clean state
+
+
+## Three-Tier Branching Strategy
+
+Professional teams use a three-tier system to manage code safely.
+
+### The Three Branches:
+
+#### 1. Main/Master (Production)
+- The live code that users see
+- Always stable and working
+- Never work directly on main
+- Only merge from staging after testing
+
+#### 2. Staging (Testing)
+- Where all features come together for testing
+- Test everything works together before going live
+- Merge feature branches here first
+- Acts as a "dress rehearsal"
+
+#### 3. Feature Branches (Development)
+- Where you build new features
+- One branch per feature or task
+- Branched from staging
+- Examples: `login-page`, `add-search`, `fix-navbar`
+
+### Workflow:
+```bash
+# 1. Create feature branch from staging
+git checkout staging
+git pull
+git checkout -b new-feature
+
+# 2. Work and commit
+git add .
+git commit -m "Add new feature"
+
+# 3. Push and create PR to staging
+git push -u origin new-feature
+
+# 4. After review, merge to staging
+# 5. Test in staging
+# 6. When stable, merge staging → main
+```
+
+### Why use this system?
+- Keeps production stable
+- Allows testing before going live
+- Team can work on multiple features simultaneously
+- Easy to rollback if something breaks
