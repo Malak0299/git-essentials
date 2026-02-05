@@ -138,3 +138,22 @@ Merge conflicts happen when two branches change the same line of code differentl
 - Communicate with your team to avoid conflicts
 - Pull from staging regularly to stay updated
 - Use a merge tool if conflicts are complex
+
+
+## Git Stash
+
+Temporarily save changes without committing when you need to switch branches.
+
+### Basic commands:
+```bash
+git stash              # Save current changes
+git stash pop          # Restore and remove from stash
+git stash list         # See all stashed changes
+git stash apply        # Restore but keep in stash
+git stash drop         # Delete a stash
+```
+
+### When to use stash:
+- Need to switch branches but not ready to commit
+- Want to pull latest changes but have uncommitted work
+- Quickly test something on a clean state
