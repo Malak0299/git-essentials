@@ -113,3 +113,28 @@ Pull Requests are how teams review code before merging into main.
 - Code review catches bugs
 - Team discusses changes
 - Keeps main branch clean and stable
+
+
+## Merge Conflicts
+
+Merge conflicts happen when two branches change the same line of code differently.
+
+### How to resolve:
+1. Git will mark the conflict in your file like this:
+```
+   <<<<<<< HEAD
+   Your changes
+   =======
+   Their changes
+   >>>>>>> branch-name
+```
+2. Edit the file to keep what you want
+3. Remove the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
+4. Save the file
+5. `git add .`
+6. `git commit -m "Resolve merge conflict"`
+
+### Tips:
+- Communicate with your team to avoid conflicts
+- Pull from staging regularly to stay updated
+- Use a merge tool if conflicts are complex
